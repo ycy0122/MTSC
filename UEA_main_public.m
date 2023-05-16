@@ -42,7 +42,7 @@ for i = [1:26]
     traindata = [data_multivariate,'/',folder_name,'/',folder_name,'_TRAIN.arff'];
     testdata =  [data_multivariate,'/',folder_name,'/',folder_name,'_TEST.arff'];
     
-    [X_train,X_test,Y_train,Y_test,N_train,N_test] = UCI_readdata(folder_name,arffFiles,numfiles);
+    [X_train,X_test,Y_train,Y_test,N_train,N_test] = UEA_readdata(folder_name,arffFiles,numfiles);
     % classification for consecutive window
     Y = [Y_train; Y_test];
     c = cvpartition(Y,'KFold',CV);
