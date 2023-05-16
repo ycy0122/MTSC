@@ -274,7 +274,7 @@ for i = [1:26]
     % 
     SpTpDyn2 = [[LEG_MT_SFT_tr;SIG_X_tr;KPM_X_tr; LEG2_DIL_tr], [LEG_MT_SFT_te;SIG_X_te;KPM_X_te; LEG2_DIL_te]];
 
-%% one-NN
+% Combine all
 clc
 tree = templateTree('PredictorSelection','interaction-curvature','Surrogate','on',...
     'SplitCriterion','deviance'); 
